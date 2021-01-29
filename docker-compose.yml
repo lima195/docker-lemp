@@ -9,7 +9,7 @@ services:
      - ../www:/usr/share/nginx/www
     working_dir: /usr/share/nginx/www
     ports:
-      - 80:80
+      - 8890:80
       - 443:443
     expose:
       - 443
