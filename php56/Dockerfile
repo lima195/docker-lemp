@@ -74,8 +74,8 @@ RUN wget https://phar.phpunit.de/phpunit.phar -O /usr/local/bin/phpunit \
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY ./etc/php_ini/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-COPY ./etc/php_ini/php.ini /usr/local/etc/php/php.ini
+# COPY ./etc/php_ini/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+# COPY ./etc/php_ini/php.ini /usr/local/etc/php/php.ini
 
 RUN pecl install xdebug-2.5.5 \
   && docker-php-ext-enable xdebug
